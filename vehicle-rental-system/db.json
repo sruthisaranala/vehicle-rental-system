@@ -333,5 +333,43 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjQu5bAlqkQ3vtXG4-rndgAbJSX1txWbhh9LfRwMA0Hg&s=10"
     }
   ],
+  "bookings": [
+    {
+      "userId": "1",
+      "userName": "sruthi",
+      "userEmail": "sruthi@gmail.com",
+      "customerName": "sruthi",
+      "phone": "9876543210",
+      "vehicleId": "1",
+      "vehicleName": "THAR ROXX",
+      "vehicleImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAoGrnVx4wKQxYkI3YwgSh6x7UiCAoV4TPw9Q5c1dylg&s=10",
+      "pricePerDay": 3500,
+      "pickupDate": "2026-11-28",
+      "returnDate": "2026-11-30",
+      "rentalDays": 2,
+      "totalAmount": 7000,
+      "status": "Confirmed",
+      "createdAt": "2026-11-14T15:14:15.154Z",
+      "id": "p7CBTfsNALI"
+    },
+    {
+      "userId": "1",
+      "userName": "sruthi",
+      "userEmail": "sruthi@gmail.com",
+      "customerName": "sruthi",
+      "phone": "9874563210",
+      "vehicleId": "2",
+      "vehicleName": "BE-6",
+      "vehicleImage": "https://www.rushlane.com/wp-content/uploads/2025/01/mahindra-be-6-two-door-render-by-zephyr-3.jpg",
+      "pricePerDay": 4000,
+      "pickupDate": "2026-11-28",
+      "returnDate": "2026-11-29",
+      "rentalDays": 1,
+      "totalAmount": 4000,
+      "status": "Confirmed",
+      "createdAt": "2026-11-14T15:17:06.846Z",
+      "id": "wUUniG3sKmQ"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

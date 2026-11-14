@@ -1,6 +1,8 @@
 
 import { useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import api from "../services/api";
 
 function Navbar() {
 
@@ -11,6 +13,36 @@ function Navbar() {
   const favorites = useSelector(
     state => state.favorites
   );
+
+  const [bookingCount, setBookingCount] = useState(0);
+
+  const location = useLocation();
+
+  useEffect(() => {
+
+    async function getBookingCount() {
+      if (!user) {
+        setBookingCount(0);
+        return;
+      }
+
+      try {
+        const response = await api.get("/bookings");
+
+        const userBookings = response.data.filter(
+          booking => booking.userId === user.id
+        );
+
+        setBookingCount(userBookings.length);
+
+      } catch (error) {
+        console.log("Error fetching booking count:", error);
+      }
+    }
+
+    getBookingCount();
+
+  }, [location.pathname, user?.id]);
 
   return (
     <nav>
@@ -23,6 +55,22 @@ function Navbar() {
         Vehicles
       </NavLink>
 
+      {user && (
+        <>
+          <NavLink to="/my-bookings">
+            My Bookings ({bookingCount})
+          </NavLink>
+
+          <NavLink to="/add-vehicle">
+            Add Vehicle
+          </NavLink>
+
+          <NavLink to="/logout">
+            Logout
+          </NavLink>
+        </>
+      )}
+
       {!user && (
         <>
           <NavLink to="/register">
@@ -31,18 +79,6 @@ function Navbar() {
 
           <NavLink to="/login">
             Login
-          </NavLink>
-        </>
-      )}
-
-      {user && (
-        <>
-          <NavLink to="/add-vehicle">
-            Add Vehicle
-          </NavLink>
-
-          <NavLink to="/logout">
-            Logout
           </NavLink>
         </>
       )}

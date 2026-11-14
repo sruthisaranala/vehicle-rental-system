@@ -1,8 +1,12 @@
+
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addFavorite } from "../features/favoriteSlice";
+
 function VehicleCard({ vehicle, onDelete }) {
-  let dispatch=useDispatch()
+
+  let dispatch = useDispatch();
+
   return (
     <div className="card">
 
@@ -32,6 +36,13 @@ function VehicleCard({ vehicle, onDelete }) {
         </Link>
 
         <Link
+          className="rent-btn"
+          to={`/rent/${vehicle.id}`}
+        >
+          Rent Now
+        </Link>
+
+        <Link
           className="edit-btn"
           to={`/edit-vehicle/${vehicle.id}`}
         >
@@ -44,9 +55,13 @@ function VehicleCard({ vehicle, onDelete }) {
         >
           Delete
         </button>
-        <button className="favorite-btn" onClick={()=>dispatch(addFavorite(vehicle))}>
- Favorite
- </button>
+
+        <button
+          className="favorite-btn"
+          onClick={() => dispatch(addFavorite(vehicle))}
+        >
+          Favorite
+        </button>
 
       </div>
 

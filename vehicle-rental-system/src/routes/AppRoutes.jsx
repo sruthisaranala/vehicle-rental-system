@@ -11,7 +11,8 @@ import Login from "../pages/Login";
 import Logout from "../pages/Logout";
 import ProtectedRoute from "./ProtectedRoutes";
 import Favorites from "../pages/Favorites"
-
+import RentalBooking from "../pages/RentalBooking"
+import MyBooking from "../pages/MyBooking";
 function AppRoutes() {
   return (
     <Routes>
@@ -64,6 +65,22 @@ function AppRoutes() {
         element={<Logout />}
       />
       <Route path='/favorite'element={<Favorites/>}
+/>
+<Route
+  path="/rent/:id"
+  element={
+    <ProtectedRoute>
+      <RentalBooking />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/my-bookings"
+  element={
+    <ProtectedRoute>
+      <MyBooking />
+    </ProtectedRoute>
+  }
 />
 </Routes>
   );
