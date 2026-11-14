@@ -76,10 +76,9 @@
 
         <h1>Available Vehicles</h1>
 
-        <Link to="/add-vehicle" className="add-btn">
-          Add Vehicle
-        </Link>
-
+        <Link to="/add-vehicle" className="add-vehicle-btn">
+  + Add Vehicle
+</Link>
         {/* FILTERS */}
         <div className="filters">
 

@@ -1,26 +1,36 @@
+
+/* ================= GLOBAL STYLES ================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #fff7ed, #ffedd5, #fed7aa);
   min-height: 100vh;
   color: #292524;
 }
+
 a {
   text-decoration: none;
 }
+
 main {
   width: 90%;
   max-width: 1200px;
   margin: 30px auto;
 }
+
 h1 {
   margin-bottom: 20px;
   color: #c2410c;
 }
+
+/* ================= NAVBAR ================= */
+
 nav {
   background: linear-gradient(135deg, #292524, #44403c);
   padding: 20px 40px;
@@ -32,6 +42,7 @@ nav {
   z-index: 1000;
   box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
 }
+
 nav a {
   color: #fff7ed;
   font-size: 15px;
@@ -40,16 +51,19 @@ nav a {
   border-radius: 8px;
   transition: 0.3s ease;
 }
+
 nav a:hover {
   color: #fb923c;
   background: rgba(249, 115, 22, 0.12);
   transform: translateY(-2px);
 }
+
 nav a.active {
   color: #fb923c;
   background: rgba(249, 115, 22, 0.15);
   box-shadow: inset 0 -2px 0 #f97316;
 }
+
 .booking-count {
   display: inline-flex;
   align-items: center;
@@ -65,14 +79,19 @@ nav a.active {
   border-radius: 50px;
   transition: 0.3s ease;
 }
+
 nav a:hover .booking-count {
   background: #9a3412;
   transform: scale(1.12);
 }
+
 nav a.active .booking-count {
   background: white;
   color: #c2410c;
 }
+
+/* ================= HOME PAGE ================= */
+
 .home-container {
   width: 90%;
   max-width: 1200px;
@@ -80,6 +99,7 @@ nav a.active .booking-count {
   padding: 30px 0;
   color: #292524;
 }
+
 .home-hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -87,6 +107,7 @@ nav a.active .booking-count {
   gap: 40px;
   padding: 45px 0;
 }
+
 .hero-tag {
   display: inline-block;
   color: #c2410c;
@@ -94,25 +115,30 @@ nav a.active .booking-count {
   letter-spacing: 2px;
   font-size: 13px;
 }
+
 .hero-text h1 {
   font-size: 55px;
   line-height: 1.1;
   margin: 20px 0;
   color: #292524;
 }
+
 .hero-text h1 span {
   display: block;
   color: #ea580c;
 }
+
 .hero-text h2 {
   font-size: 22px;
   margin-bottom: 15px;
 }
+
 .hero-text p {
   color: #57534e;
   line-height: 1.8;
   max-width: 520px;
 }
+
 .hero-btn {
   display: inline-block;
   margin-top: 20px;
@@ -123,13 +149,16 @@ nav a.active .booking-count {
   font-weight: bold;
   transition: 0.3s ease;
 }
+
 .hero-btn:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(234, 88, 12, 0.3);
 }
+
 .hero-image {
   position: relative;
 }
+
 .hero-image img {
   width: 100%;
   height: 390px;
@@ -137,6 +166,7 @@ nav a.active .booking-count {
   border-radius: 18px;
   box-shadow: 0 15px 35px rgba(41, 37, 36, 0.2);
 }
+
 .image-label {
   position: absolute;
   bottom: 20px;
@@ -146,45 +176,56 @@ nav a.active .booking-count {
   padding: 15px 22px;
   border-radius: 10px;
 }
+
 .image-label span {
   font-size: 11px;
   color: #fdba74;
   letter-spacing: 1px;
 }
+
 .hero-stats {
   display: flex;
   gap: 30px;
   margin-top: 30px;
   flex-wrap: wrap;
 }
+
 .hero-stats h3 {
   color: #c2410c;
   margin-bottom: 3px;
 }
+
 .hero-stats span {
   font-size: 12px;
   color: #78716c;
 }
+
+/* ================= HOME SECTIONS ================= */
+
 .features-section,
 .categories-section {
   padding: 55px 0;
   text-align: center;
 }
+
 .section-title {
   text-align: center;
   font-size: 32px;
   color: #292524;
   margin: 45px 0 10px;
 }
+
 .section-subtitle {
   color: #78716c;
   margin-bottom: 30px;
 }
+
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
+
 .feature-card {
   background: white;
   padding: 30px 20px;
@@ -192,26 +233,34 @@ nav a.active .booking-count {
   border: 1px solid #fed7aa;
   transition: 0.3s ease;
 }
+
 .feature-card:hover {
   transform: translateY(-7px);
   box-shadow: 0 10px 25px rgba(194, 65, 12, 0.12);
 }
+
 .feature-card span {
   font-size: 35px;
 }
+
 .feature-card h3 {
   color: #c2410c;
   margin: 15px 0 10px;
 }
+
 .feature-card p {
   color: #78716c;
   line-height: 1.6;
 }
+
+/* ================= VEHICLE GALLERY ================= */
+
 .vehicle-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
+
 .vehicle-box {
   position: relative;
   overflow: hidden;
@@ -219,9 +268,11 @@ nav a.active .booking-count {
   background: #292524;
   transition: 0.3s ease;
 }
+
 .vehicle-box:hover {
   transform: translateY(-7px);
 }
+
 .vehicle-box img {
   width: 100%;
   height: 240px;
@@ -229,21 +280,28 @@ nav a.active .booking-count {
   display: block;
   transition: 0.4s ease;
 }
+
 .vehicle-box:hover img {
   transform: scale(1.05);
 }
+
 .vehicle-info {
   padding: 18px;
   color: white;
   text-align: left;
 }
+
 .vehicle-info h3 {
   color: #fdba74;
   margin-bottom: 7px;
 }
+
 .vehicle-info p {
   color: #e7e5e4;
 }
+
+/* ================= WHY CHOOSE US ================= */
+
 .why-us {
   background: #292524;
   color: white;
@@ -255,15 +313,18 @@ nav a.active .booking-count {
   gap: 30px;
   margin: 40px 0;
 }
+
 .why-us h2 {
   max-width: 450px;
   font-size: 30px;
   margin-top: 15px;
 }
+
 .why-list p {
   margin: 12px 0;
   color: #fed7aa;
 }
+
 .home-cta {
   text-align: center;
   padding: 55px 20px;
@@ -272,31 +333,40 @@ nav a.active .booking-count {
   color: white;
   border-radius: 18px;
 }
+
 .home-cta h2 {
   font-size: 30px;
 }
+
 .home-cta p {
   color: #ffedd5;
 }
+
 .home-cta .hero-btn {
   background: white;
   color: #c2410c;
 }
+
+/* ================= VEHICLES PAGE ================= */
+
 .vehicle-list-container {
   width: 90%;
   max-width: 1200px;
   margin: 35px auto;
 }
+
 .vehicle-list-container h1 {
   text-align: center;
   color: #292524;
 }
+
 .car {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   padding: 20px 0;
 }
+
 .card {
   background: white;
   border-radius: 15px;
@@ -306,28 +376,34 @@ nav a.active .booking-count {
   display: flex;
   flex-direction: column;
 }
+
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 30px rgba(234, 88, 12, 0.15);
 }
+
 .card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
   transition: 0.4s ease;
 }
+
 .card:hover img {
   transform: scale(1.05);
 }
+
 .card h3 {
   padding: 15px 15px 5px;
   color: #292524;
 }
+
 .card p {
   padding: 5px 15px;
   color: #78716c;
   line-height: 1.5;
 }
+
 .card-actions {
   display: flex;
   gap: 10px;
@@ -335,6 +411,7 @@ nav a.active .booking-count {
   margin-top: auto;
   width: 100%;
 }
+
 .view-btn,
 .edit-btn,
 .delete-btn,
@@ -350,18 +427,23 @@ nav a.active .booking-count {
   font-size: 13px;
   transition: 0.3s ease;
 }
+
 .view-btn {
   background: linear-gradient(135deg, #c2410c, #f97316);
 }
+
 .edit-btn {
   background: linear-gradient(135deg, #57534e, #78716c);
 }
+
 .delete-btn {
   background: linear-gradient(135deg, #b91c1c, #ef4444);
 }
+
 .rent-btn {
   background: linear-gradient(135deg, #c2410c, #f97316);
 }
+
 .view-btn:hover,
 .edit-btn:hover,
 .delete-btn:hover,
@@ -369,6 +451,9 @@ nav a.active .booking-count {
   transform: translateY(-3px);
   opacity: 0.9;
 }
+
+/* ================= VEHICLE FILTERS ================= */
+
 .filters {
   display: flex;
   align-items: center;
@@ -381,6 +466,7 @@ nav a.active .booking-count {
   border-radius: 16px;
   border: 1px solid #ffdcc2;
 }
+
 .filters input,
 .filters select {
   padding: 14px 18px;
@@ -395,21 +481,28 @@ nav a.active .booking-count {
   cursor: pointer;
   transition: 0.3s ease;
 }
+
 .filters input {
   cursor: text;
 }
+
 .filters input::placeholder {
   color: #a99a90;
 }
+
 .filters input:hover,
 .filters select:hover {
   border-color: #f28c45;
 }
+
 .filters input:focus,
 .filters select:focus {
   border-color: #f07824;
   box-shadow: 0 0 0 3px rgba(240, 120, 36, 0.15);
 }
+
+/* ================= VEHICLE DETAILS ================= */
+
 .details {
   max-width: 1000px;
   margin: 35px auto;
@@ -418,6 +511,7 @@ nav a.active .booking-count {
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(120, 53, 15, 0.08);
 }
+
 .details img {
   width: 100%;
   height: 450px;
@@ -425,73 +519,116 @@ nav a.active .booking-count {
   border-radius: 15px;
   margin-bottom: 25px;
 }
+
 .details h1 {
   margin-bottom: 15px;
   color: #292524;
 }
+
 .details h3 {
   margin-top: 18px;
   color: #ea580c;
 }
+
 .details p {
   margin-top: 6px;
   line-height: 1.7;
   color: #57534e;
 }
+
 .details ul {
   margin-top: 10px;
   padding-left: 20px;
 }
+
 .details li {
   margin-bottom: 8px;
   color: #57534e;
 }
+
+/* ================= ADD / EDIT VEHICLE FORMS ================= */
+
 .form-container {
-  max-width: 700px;
-  margin: 35px auto;
-  background: white;
+  width: 90%;
+  max-width: 1000px;
+  margin: 45px auto;
   padding: 35px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #fed7aa;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(120, 53, 15, 0.08);
+  box-shadow: 0 10px 30px rgba(124, 45, 18, 0.12);
 }
+
+.form-container form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 20px;
+}
+
 .form-container h1,
 .form-container h2 {
+  grid-column: 1 / -1;
   text-align: center;
-  margin-bottom: 25px;
-  color: #292524;
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  color: #9a3412;
+  border-bottom: 2px solid #fed7aa;
 }
+
 .form-container label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
   color: #44403c;
 }
+
 .form-container input,
 .form-container select,
 .form-container textarea {
   width: 100%;
-  padding: 14px;
-  margin-bottom: 18px;
-  border: 2px solid #e7e5e4;
+  min-width: 0;
+  padding: 14px 15px;
+  margin-bottom: 0;
+  border: 1px solid #fdba74;
   border-radius: 10px;
-  font-size: 16px;
+  font-size: 15px;
+  font-family: inherit;
   outline: none;
   transition: 0.3s ease;
-  background: white;
+  background: #fffaf5;
+  color: #292524;
 }
-.form-container textarea {
-  resize: vertical;
-  min-height: 120px;
+
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+  color: #78716c;
 }
+
 .form-container input:focus,
 .form-container select:focus,
 .form-container textarea:focus {
-  border-color: #f97316;
-  box-shadow: 0 0 10px rgba(249, 115, 22, 0.15);
+  border-color: #ea580c;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.13);
 }
-.submit-btn {
+
+.form-container textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.form-container textarea[name="description"],
+.form-container textarea[name="features"],
+.form-container input[name="image"],
+.form-container input[name="cancellationPolicy"] {
+  grid-column: 1 / -1;
+}
+
+.submit-btn,
+.form-container .submit-btn {
+  grid-column: 1 / -1;
   width: 100%;
-  padding: 14px;
+  padding: 15px;
   border: none;
   border-radius: 10px;
   background: linear-gradient(135deg, #c2410c, #f97316);
@@ -501,16 +638,21 @@ nav a.active .booking-count {
   cursor: pointer;
   transition: 0.3s ease;
 }
+
 .submit-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(234, 88, 12, 0.25);
 }
+
+/* ================= AUTHENTICATION ================= */
+
 .auth-container {
   min-height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .auth-card {
   width: 100%;
   max-width: 450px;
@@ -519,11 +661,13 @@ nav a.active .booking-count {
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(120, 53, 15, 0.08);
 }
+
 .auth-card h1 {
   text-align: center;
   margin-bottom: 25px;
   color: #9a3412;
 }
+
 .auth-card input {
   width: 100%;
   padding: 14px;
@@ -534,10 +678,12 @@ nav a.active .booking-count {
   outline: none;
   transition: 0.3s ease;
 }
+
 .auth-card input:focus {
   border-color: #f97316;
   box-shadow: 0 0 12px rgba(249, 115, 22, 0.15);
 }
+
 .auth-btn {
   width: 100%;
   padding: 14px;
@@ -550,25 +696,32 @@ nav a.active .booking-count {
   cursor: pointer;
   transition: 0.3s ease;
 }
+
 .auth-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(234, 88, 12, 0.25);
 }
+
 .auth-card p {
   text-align: center;
   margin-top: 15px;
   color: #78716c;
 }
+
 .auth-card p a {
   color: #c2410c;
   font-weight: bold;
 }
+
+/* ================= FAVORITES PAGE ================= */
+
 .favorites-container {
   padding: 40px;
   min-height: 80vh;
   background: linear-gradient(135deg, #fff7ed, #ffedd5);
   border-radius: 15px;
 }
+
 .page-title {
   text-align: center;
   margin-bottom: 35px;
@@ -576,11 +729,13 @@ nav a.active .booking-count {
   font-size: 34px;
   font-weight: 700;
 }
+
 .favorites-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
+
 .favorite-card {
   background: white;
   border-radius: 18px;
@@ -589,26 +744,32 @@ nav a.active .booking-count {
   box-shadow: 0 8px 25px rgba(154, 52, 18, 0.12);
   transition: 0.3s ease;
 }
+
 .favorite-card:hover {
   transform: translateY(-7px);
   box-shadow: 0 12px 30px rgba(154, 52, 18, 0.2);
 }
+
 .favorite-card img {
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
+
 .favorite-content {
   padding: 22px;
 }
+
 .favorite-content h2 {
   color: #9a3412;
   margin-bottom: 15px;
 }
+
 .favorite-content p {
   color: #57534e;
   margin: 12px 0;
 }
+
 .favorite-content button {
   width: 100%;
   padding: 12px;
@@ -622,16 +783,19 @@ nav a.active .booking-count {
   cursor: pointer;
   transition: 0.3s ease;
 }
+
 .favorite-content button:hover {
   background: #c2410c;
   transform: translateY(-2px);
 }
+
 .favorite-actions {
   display: flex;
   gap: 12px;
   margin-top: 15px;
   align-items: stretch;
 }
+
 .favorite-actions a,
 .favorite-actions button {
   flex: 1;
@@ -651,16 +815,20 @@ nav a.active .booking-count {
   text-align: center;
   cursor: pointer;
 }
+
 .favorite-actions a {
   background: linear-gradient(135deg, #ea580c, #f97316);
 }
+
 .favorite-actions button {
   background: #9a3412;
 }
+
 .favorite-actions a:hover,
 .favorite-actions button:hover {
   opacity: 0.85;
 }
+
 .favorite-btn {
   width: 25%;
   min-width: 120px;
@@ -673,10 +841,12 @@ nav a.active .booking-count {
   cursor: pointer;
   transition: 0.3s ease;
 }
+
 .favorite-btn:hover {
   background: linear-gradient(135deg, #ea580c, #c2410c);
   transform: translateY(-2px);
 }
+
 .empty-favorites {
   text-align: center;
   padding: 60px 20px;
@@ -685,6 +855,9 @@ nav a.active .booking-count {
   color: #9a3412;
   font-size: 18px;
 }
+
+/* ================= RENTAL BOOKING DETAILS ================= */
+
 .rental-booking {
   max-width: 1100px;
   margin: 40px auto;
@@ -693,12 +866,14 @@ nav a.active .booking-count {
   border-radius: 22px;
   box-shadow: 0 10px 30px rgba(120, 53, 15, 0.12);
 }
+
 .rental-booking > h1 {
   text-align: center;
   color: #9a3412;
   font-size: 34px;
   margin-bottom: 30px;
 }
+
 .booking-vehicle {
   max-width: 750px;
   margin: auto;
@@ -710,26 +885,31 @@ nav a.active .booking-count {
   box-shadow: 0 8px 25px rgba(120, 53, 15, 0.10);
   transition: 0.3s ease;
 }
+
 .booking-vehicle:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(194, 65, 12, 0.15);
 }
+
 .booking-vehicle img {
   width: 100%;
   height: 350px;
   object-fit: cover;
 }
+
 .booking-vehicle h2 {
   color: #9a3412;
   font-size: 28px;
   margin: 22px 25px 15px;
 }
+
 .booking-vehicle p {
   color: #57534e;
   font-size: 16px;
   padding: 8px 25px;
   line-height: 1.5;
 }
+
 .booking-vehicle h3 {
   margin: 15px 25px;
   padding: 15px;
@@ -738,6 +918,9 @@ nav a.active .booking-count {
   border-radius: 10px;
   border-left: 4px solid #f97316;
 }
+
+/* ================= BOOKING FORM ================= */
+
 .booking-form {
   max-width: 850px;
   margin: 35px auto;
@@ -750,6 +933,7 @@ nav a.active .booking-count {
   flex-direction: column;
   gap: 12px;
 }
+
 .booking-form h2 {
   color: #9a3412;
   font-size: 24px;
@@ -757,11 +941,13 @@ nav a.active .booking-count {
   padding-bottom: 10px;
   border-bottom: 2px solid #ffedd5;
 }
+
 .booking-form label {
   color: #44403c;
   font-weight: 600;
   margin-top: 8px;
 }
+
 .booking-form input {
   width: 100%;
   padding: 13px 15px;
@@ -772,14 +958,17 @@ nav a.active .booking-count {
   outline: none;
   transition: 0.3s ease;
 }
+
 .booking-form input:focus {
   border-color: #f97316;
   box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
 }
+
 .booking-form input[readonly] {
   background: #f5f5f4;
   color: #78716c;
 }
+
 .booking-summary {
   margin-top: 20px;
   padding: 25px;
@@ -787,20 +976,24 @@ nav a.active .booking-count {
   border-radius: 14px;
   border-left: 5px solid #f97316;
 }
+
 .booking-summary h2 {
   border: none;
   margin-top: 0;
 }
+
 .booking-summary p {
   color: #57534e;
   margin: 12px 0;
   font-size: 16px;
 }
+
 .booking-summary h3 {
   color: #c2410c;
   font-size: 23px;
   margin-top: 20px;
 }
+
 .booking-form button {
   margin-top: 15px;
   padding: 15px;
@@ -813,14 +1006,19 @@ nav a.active .booking-count {
   cursor: pointer;
   transition: 0.3s ease;
 }
+
 .booking-form button:hover:not(:disabled) {
   transform: translateY(-3px);
   box-shadow: 0 8px 18px rgba(194, 65, 12, 0.25);
 }
+
 .booking-form button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+/* ================= MY BOOKINGS ================= */
+
 .my-bookings-container {
   width: 95%;
   max-width: 1250px;
@@ -830,18 +1028,21 @@ nav a.active .booking-count {
   background: linear-gradient(135deg, #fff7ed, #ffedd5);
   border-radius: 20px;
 }
+
 .my-bookings-container > h1 {
   text-align: center;
   color: #9a3412;
   font-size: 34px;
   margin-bottom: 35px;
 }
+
 .my-bookings-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 28px;
   align-items: stretch;
 }
+
 .my-booking-card {
   background: white;
   border: 1px solid #fed7aa;
@@ -852,16 +1053,19 @@ nav a.active .booking-count {
   box-shadow: 0 8px 25px rgba(120, 53, 15, 0.10);
   transition: 0.3s ease;
 }
+
 .my-booking-card:hover {
   transform: translateY(-7px);
   box-shadow: 0 15px 30px rgba(194, 65, 12, 0.16);
 }
+
 .my-booking-card img {
   width: 100%;
   height: 230px;
   object-fit: cover;
   display: block;
 }
+
 .my-booking-card h2 {
   color: #9a3412;
   font-size: 23px;
@@ -869,6 +1073,7 @@ nav a.active .booking-count {
   padding-bottom: 12px;
   border-bottom: 2px solid #ffedd5;
 }
+
 .my-booking-card p {
   color: #57534e;
   font-size: 15px;
@@ -917,6 +1122,8 @@ nav a.active .booking-count {
   color: #78716c;
 }
 
+/* ================= TABLET RESPONSIVE ================= */
+
 @media (max-width: 900px) {
   .car,
   .vehicle-gallery,
@@ -937,6 +1144,8 @@ nav a.active .booking-count {
     align-items: flex-start;
   }
 }
+
+/* ================= MOBILE RESPONSIVE ================= */
 
 @media (max-width: 768px) {
   .favorites-container {
@@ -1034,8 +1243,28 @@ nav a.active .booking-count {
   }
 
   .form-container {
-    margin: 20px 10px;
-    padding: 20px;
+    width: 94%;
+    margin: 20px auto;
+    padding: 22px 16px;
+  }
+
+  .form-container form {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .form-container h1,
+  .form-container h2,
+  .form-container textarea[name="description"],
+  .form-container textarea[name="features"],
+  .form-container input[name="image"],
+  .form-container input[name="cancellationPolicy"],
+  .form-container .submit-btn {
+    grid-column: 1;
+  }
+
+  .form-container h2 {
+    font-size: 24px;
   }
 
   .auth-card {
@@ -1092,4 +1321,42 @@ nav a.active .booking-count {
   .my-booking-card img {
     height: 200px;
   }
+}
+.form-container button.submit-btn {
+  display: block;
+  grid-column: 1 / -1;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #c2410c, #f97316);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.form-container button.submit-btn:hover {
+  background: linear-gradient(135deg, #9a3412, #c2410c);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(154, 52, 18, 0.25);
+}
+.add-vehicle-btn {
+  display: inline-block;
+  padding: 13px 28px;
+  background: linear-gradient(135deg, #c2410c, #f97316);
+  color: white !important;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 12px rgba(194, 65, 12, 0.2);
+}
+
+.add-vehicle-btn:hover {
+  background: linear-gradient(135deg, #9a3412, #c2410c);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(194, 65, 12, 0.3);
 }
